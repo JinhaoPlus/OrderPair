@@ -10,8 +10,12 @@ public class OrderRepo {
 	private static LinkedList<String> repoList = new LinkedList<String>();
 	static
 	{
-		for(int i = 1;i <= 28;i++)
-			repoList.add(new Integer(i).toString());
+		for(int i = 1;i <= 28;i++){
+			if(i<10)
+				repoList.add("0"+new Integer(i).toString());
+			else 
+				repoList.add(new Integer(i).toString());
+		}
 		for(int j = 0;j <= 100;j++){
 			Random random = new Random();
 			int left = random.nextInt(28);
