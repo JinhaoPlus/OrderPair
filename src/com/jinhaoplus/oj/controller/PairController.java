@@ -53,10 +53,12 @@ public class PairController {
 				modelAndView.addObject("returnOrder", order);
 			}else{
 				modelAndView.setViewName("index");
-				modelAndView.addObject("signupInfo", "排号已经确定");
+				modelAndView.addObject("pair", pair);
+				modelAndView.addObject("signupInfo", "排号已经确定:#"+thePair.getrOrder());
 			}
 		}else {
 			modelAndView.setViewName("index");
+			modelAndView.addObject("pair", pair);
 			modelAndView.addObject("signupInfo", "学号姓名不匹配");
 		}
 		return modelAndView;

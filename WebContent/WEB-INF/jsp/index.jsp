@@ -51,17 +51,18 @@
 				<hr>
 				<div class="row form-group">
 					<input autofocus="autofocus" id="userName" maxlength="30"
-						name="userName" placeholder="输入姓名拼音全拼" type="text" 
-						class="form-control">
+						name="userName" placeholder="姓名拼音全拼，如wangxiaoming" type="text" 
+						class="form-control" value="${pair.userName }" />
 				</div>
 				<div class="row form-group">
 					<input id="bitCode" maxlength="12"
-						name="bitCode" placeholder="输入学号" type="text" 
-						class="form-control">
+						name="bitCode" placeholder="学号，如1120121900" type="text" 
+						class="form-control" value="${pair.bitCode }"/>
 				</div>
 				<div class="row form-group">
-					<button class="col-md-7 btn btn-primary" type="submit"
+					<button class="col-md-4 btn btn-primary" type="submit"
 						onclick="valid_submit();">获取排号</button>
+					<a class="col-md-7 col-md-offset-1 btn btn-success" href="${ctx }/orders">去看现有的排号</a>
 				</div>
 				<c:if test="${signupInfo != null}">
 					<div class="row form-group alert alert-warning">${signupInfo }</div>

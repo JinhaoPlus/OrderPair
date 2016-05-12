@@ -27,6 +27,9 @@
 					</div>
 				</div>
 				<hr/>
+				<div class="row form-group">
+					<a class="btn btn-primary" href="${ctx }/index">获取我的排号</a>
+				</div>
 				<div id="problemPostListRow" class="row">
 					<table id="problemList"
 						class="table table-hover table-striped table-centered">

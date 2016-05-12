@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <%@	include file="include.jsp"%>
 <script type="text/javascript">
+	
 </script>
 </head>
 <body>
@@ -16,9 +17,13 @@
 		<div class="container">
 			<h3>你的德育答辩排号是</h3>
 			<hr>
-			<div class="jumbotron">
-				<h1>${returnOrder }</h1>
+			<div class="row form-group jumbotron">
+				<h1># ${returnOrder }</h1>
 			</div>
+			<div class="row form-group">
+				<a class="btn btn-primary" href="${ctx }/orders">去看其他人的排号</a>
+			</div>
+
 		</div>
 	</div>
 </body>
