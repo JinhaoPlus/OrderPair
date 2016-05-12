@@ -22,5 +22,4 @@ public class Pair {
 	public void setrOrder(String rOrder) {
 		this.rOrder = rOrder;
 	}
-	
 }
