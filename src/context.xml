@@ -57,7 +57,7 @@
 		</property>
 		<property name="url">
 		
-			<value>jdbc:mysql://192.168.0.1:1225/plusoj</value>
+			<value>jdbc:mysql://192.168.0.1:1225/07111205</value>
 
 		</property>
 	</bean>
