@@ -1,5 +1,7 @@
 package com.jinhaoplus.oj.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -26,6 +28,15 @@ public class PairController {
 	public ModelAndView index(HttpServletRequest request,HttpServletResponse response){
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("index");
+		return modelAndView;
+	}
+	
+	@RequestMapping(value="/orders")
+	public ModelAndView orders(HttpServletRequest request,HttpServletResponse response){
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("orders");
+		List<Pair> pairs = pairDao.getPairs();
+		modelAndView.addObject("pairs", pairs);
 		return modelAndView;
 	}
 	

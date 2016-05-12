@@ -10,6 +10,15 @@
 		from tbl_dydb 
 		where bitcode = #bitCode#
 	</select>
+	<select id="getAllPairs" resultClass="pair">
+		select 
+		bitcode as bitCode, 
+		username as userName,
+		rorder as rOrder
+		from tbl_dydb
+		where rorder is not null
+		order by rorder
+	</select>
 	<update id="updatePair" parameterClass="pair">
 		update tbl_dydb
 		<dynamic prepend="SET">

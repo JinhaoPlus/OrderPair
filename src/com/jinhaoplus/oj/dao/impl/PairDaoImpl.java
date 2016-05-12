@@ -1,5 +1,7 @@
 package com.jinhaoplus.oj.dao.impl;
 
+import java.util.List;
+
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.sql.DataSource;
@@ -38,5 +40,10 @@ public class PairDaoImpl extends SqlMapClientDaoSupport implements PairDao{
 	public void updatePairByBitCode(Pair pair) {
 		getSqlMapClientTemplate().update("updatePair", pair);
 		
+	}
+
+	@Override
+	public List<Pair> getPairs() {
+		return (List<Pair>)getSqlMapClientTemplate().queryForList("getAllPairs",null);
 	}
 }

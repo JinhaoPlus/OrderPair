@@ -50,7 +50,7 @@
 				<h4 class="form-signin-heading">抽取答辩排号</h4>
 				<hr>
 				<div class="row form-group">
-					<input autofocus="autofocus" id="userName" maxlength="10"
+					<input autofocus="autofocus" id="userName" maxlength="30"
 						name="userName" placeholder="输入姓名拼音全拼" type="text" 
 						class="form-control">
 				</div>
@@ -64,7 +64,7 @@
 						onclick="valid_submit();">获取排号</button>
 				</div>
 				<c:if test="${signupInfo != null}">
-					<div class="form-group alert alert-warning">${signupInfo }</div>
+					<div class="row form-group alert alert-warning">${signupInfo }</div>
 				</c:if>
 			</form>
 			
