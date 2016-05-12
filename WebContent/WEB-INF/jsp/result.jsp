@@ -8,9 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <%@	include file="include.jsp"%>
 <script type="text/javascript">
-	$(function() {
-		valid_form();
-	});
 </script>
 </head>
 <body>
@@ -20,7 +17,7 @@
 			<h3>你的德育答辩排号是</h3>
 			<hr>
 			<div class="jumbotron">
-				<h1>12</h1>
+				<h1>${returnOrder }</h1>
 			</div>
 		</div>
 	</div>

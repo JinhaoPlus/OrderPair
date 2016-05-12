@@ -10,4 +10,13 @@
 		from tbl_dydb 
 		where bitcode = #bitCode#
 	</select>
+	<update id="updatePair" parameterClass="pair">
+		update tbl_dydb
+		<dynamic prepend="SET">
+			<isNotNull prepend="," property="rOrder">
+				rorder = #rOrder#
+			</isNotNull>
+		</dynamic>
+		WHERE bitcode = #bitCode#
+	</update>
 </sqlMap>

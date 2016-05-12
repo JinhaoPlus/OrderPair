@@ -33,4 +33,10 @@ public class PairDaoImpl extends SqlMapClientDaoSupport implements PairDao{
     public Pair getPairByBitCode(String bitCode){
     	return (Pair)getSqlMapClientTemplate().queryForObject("getPair",bitCode);
     }
+
+	@Override
+	public void updatePairByBitCode(Pair pair) {
+		getSqlMapClientTemplate().update("updatePair", pair);
+		
+	}
 }
